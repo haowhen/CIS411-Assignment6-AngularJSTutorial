@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html ng-app="angularTutorial">
+<html>
 
 <head>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link data-require="ng-table@*" data-semver="0.3.1" rel="stylesheet" href="http://bazalt-cms.com/assets/ng-table/0.3.1/ng-table.css" />
+    <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/styles.css" />
+    
 </head>
 
-<body ng-controller="TutorialController as tutorial">
-    
+<body class="container" ng-app="main" ng-controller="TutorialController">
     <!-- Tutorial Header -->
     <header>
-        <h1 class="text-center">AngularJS Tutorials</h1>
+        <h1 class="text-center"><u>AngularJS Tutorials</u></h1>
     </header>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="sortByAndFilter">
+            <button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>
+            <button ng-click="tableParams.filter({})" class="btn btn-default pull-right">Clear filter</button>
+                <p><strong>Sort by:</strong> {{tableParams.sorting()|json}}</p>
+                <p><strong>Filter:</strong> {{tableParams.filter()|json}}</p>
+            </div>
+
+                <table ng-table="tableParams" class="table" show-filter="true" style="width: 100%">
+                    <tr ng-repeat="tutorial in $data">
+                        <td data-title="'Title'"  sortable="'title'" filter="{ 'title': 'text' }">
+                            {{tutorial.title}}
+                        </td>
+                        <td data-title="'Author'" sortable="'author'" filter="{ 'author': 'text' }">
+                            {{tutorial.author}}
+                        </td>
+                        <td data-title="'Url'">
+                            <a ng-href="{{tutorial.url}}">Go to Tutorial</a>
+                        </td>
+                        <td data-title="'Image'">
+                            <img src="{{tutorial.image}}" </td>
+                    </tr>
+                </table>
+        </div>
+    </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@*" data-semver="1.2.0-rc3-nonmin" src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+    <script data-require="ng-table@*" data-semver="0.3.1" src="http://bazalt-cms.com/assets/ng-table/0.3.1/ng-table.js"></script>
+    <script src="Scripts/app.js"></script>
 </body>
+
+</html>
 
 </html>
