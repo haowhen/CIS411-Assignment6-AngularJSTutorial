@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My AngularJS Blog</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        img.codeSample {
+            width: 75%;
+            height: 10%;
+        }
+        i {
+            color: red;
+        }
+    </style>
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand">My AngularJS Blog |</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#whatIsAngularJS">What is AngularJS?</a>
+                    </li>
+                    <li><a href="#whyAngularJS">What is AngularJS?</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-expanded="false">Where do I begin? <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#step1">Step 1: Add AngularJS library</a>
+                            </li>
+                            <li><a href="#step2">Step 2: Add ngTable script and CSS</a>
+                            </li>
+                            <li><a href="#step3">Step 3: Add JavaScript containing your AngularJS app</a>
+                            </li>
+                            <li><a href="#step4">Step 4: Declare the app module</a>
+                            </li>
+                            <li><a href="#step5">Step 5: Initialize controller</a>
+                            </li>
+                            <li><a href="#step6">Step 6: Initialize data</a>
+                            </li>
+                            <li><a href="#step6">Step 7: Set-up sorting and filtering</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="whatIsAngularJS"><u>What is AngularJS?</u></h2> 
+                <br/>
+                <q>AngularJS, commonly referred to as Angular, is an open-source web application framework maintained by Google and a community of individual developers and corporations to address many of the challenges encountered in developing single-page applications. Its goal is to simplify both development and testing of such applications by providing a framework for client-side model–view–controller (MVC) architecture, along with components commonly used in rich internet applications.</q> -Wikipedia
+                <img style="width: 400px; height: 120px;" src="Images/AngularJSImage.jpeg">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="whyAngularJS"><u>Why AngularJS?</u></h2> 
+                <br/>
+                <q>HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.</q> -AngularJS.org
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="whereDoYouStart"><u>Where do I begin?</u></h2>
+                <p>For this project, we're going to create a simple application using AngularJS. This app will pull JSON (JavaScript Object Notation) into a table that allows sorting and filtering. We'll be using ngTable in this app since it's simple and lightweight enough to get running in nearly no time.</p>
+                <h3 id="step1">Step 1: Add AngularJS library</h3>
+                <p>The fastest way to get started with Angular is to point your html script tag to a Google CDN (content delivery network) URL. You can get this at Google's hosted libraries <a href="https://developers.google.com/speed/libraries/devguide#angularjs" target="_blank">site.</a>
+                    <img class="codeSample" src="Images/Step1.PNG">
+                    <br/>
+                    <i>*Note: I've included the script tag right before my closing body tag for performance. I encourage you to read on the subject to decide where you would prefer to put yours. </i>
+                </p>
+
+                <h3 id="step2">Step 2: Add ngTable script and CSS</h3>
+                <p>Add the script and CSS for ngTable. You can get this from their
+                    <a href="http://bazalt-cms.com/ng-table/example/1" target="_blank">website</a> in any of their examples.
+                    <img class="codeSample" src="Images/Step2Css.PNG">
+                    <br/>
+                    <br/>
+                    <img class="codeSample" src="Images/Step2Script.PNG">
+                </p>
+
+                <h3 id="step3">Step 3: Add JavaScript containing your AngularJS app</h3>
+                <p>Add a JavaScript file in your directory which will contain your AngularJS, and reference this on your HTML page.
+                    <br/>
+                    <img class="codeSample" src="Images/Step3.PNG">
+                </p>
+
+                <h3 id="step4">Step 4: Declare the app module</h3>
+                <p>Declare the app module in your javascript file, and point to the app module in an element of your HTML that will be containing the AngularJS app.
+                    <br/>
+                    <img class="codeSample" src="Images/Step4AppModule.PNG">
+                    <br/>
+                    <i>*Note: In order to use ngTable, we must also include it in our app module.</i>
+                    <img class="codeSample" src="Images/Step4Body.PNG">
+                    <br/>
+                    <i>*Note: You have to include the ng-app attribute to the root HTML element of your AngularJS app. You can either add it to the html element, or the body element like the example shown above.</i>
+                </p>
+
+                <h3 id="step5">Step 5: Initialize controller</h3>
+                <p>AngularJS applications mainly rely on controllers to control the flow of data in the application. We will need to add a controller function in our JavaScript file, and point to the controller with the part of our HTML that requires it.
+                    <br/>
+                    <img class="codeSample" src="Images/Step5Script.PNG">
+                    <br/>
+                    <i>*Note: The three parameters we're passing into our controller function here will help with the sorting and filtering later.</i>
+                    <img class="codeSample" src="Images/Step5Body.PNG">
+                </p>
+
+                <h3 id="step6">Step 6: Initialize data</h3>
+                <p>For this project, we'll be passing in a JSON array of objects. We will initialize a data variable and set it equal to this JSON array inside of our controller function.
+                    <br/>
+                    <img class="codeSample" src="Images/Step6.PNG">
+                </p>
+
+                <h3 id="step7">Step 7: Set-up sorting and filtering</h3>
+                <p>Now you need to set up your parameters for sorting and filtering inside of your JavaScript file. There are comments on the different sections to give you an idea of what it's doing.
+                <br/>
+                <img class="codeSample" src="Images/Step7.PNG">
+                    <br/>
+                    <i>*Note: In order to do sorting and filtering, you can set a filteredData variable which will filter your data. From here, you can then set an orderedData variable which will sort the filteredData.</i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>
