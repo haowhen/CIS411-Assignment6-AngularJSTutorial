@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Node.js Blog</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Content/blogstyles.css" type="text/css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+
+    <!--[if IE]>
+        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand">My Blog |</a>
+            </div>
+
+            <!--Starts Navigation-->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!--First level-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-expanded="false">AngularJS<span class="caret"></span></a>
+                        <!--Everything under AngularJS-->
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+
+                            <li><a href="angularjsblog.html#whatIsAngularJS">What is AngularJS?</a>
+                            </li>
+                            <li><a href="angularjsblog.html#whyAngularJS">Why AngularJS?</a>
+                            </li>
+
+                            <!--Second level under AngularJS-->
+                            <li class="dropdown-submenu">
+
+                                <a tabindex="-1" href="angularjsblog.html#whereDoYouStart">Where do I begin?</a>
+
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="angularjsblog.html#step1">Step 1: Add AngularJS library</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step2">Step 2: Add ngTable script and CSS</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step3">Step 3: Add JavaScript containing your AngularJS app</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step4">Step 4: Declare the app module</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step5">Step 5: Initialize controller</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step6">Step 6: Initialize data</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step7">Step 7: Set-up sorting and filtering</a>
+                                    </li>
+                                    <li><a href="angularjsblog.html#step8">Step 8: Add your table</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--End of Second level under AngularJS-->
+
+                        </ul>
+                        <!--End of First level under AngularJS-->
+
+                    </li>
+                    <!--End of AngularJS-->
+
+                    <li><a href="nodejsblog.html">Node.js</a>
+                    </li>
+                </ul>
+            </div>
+            <!--.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container text-center">
+        <div row>
+            <div class="col-md-12">
+                <h2><u>Node.js</u></h2>
+                <p>Node.js is an open source, cross-platform runtime environment command line tool. It was built for server side JavaScript code. <br/><br/> One of the things that really sticks out in Node.js is that it is able to operate on a single-thread. Traditional server side techniques requires each request to spawn a new thread; this causes the app to take up system RAM, and eventually it maxes out at the number of RAM available. <br /><br/> Node.js uses non-blocking I/O (input/output) calls and is able to support tens of thousands of concurrent connections. Every I/O call that Node.js makes must immediately take a callback which keeps the CPU busy, and can save you memory. If the call requires time to complete, then Node.js will continue running until the completion of the I/O is later communicated back. The non-blocking I/O call waits for no one!</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>

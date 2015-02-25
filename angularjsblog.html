@@ -10,19 +10,10 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Content/blogstyles.css" type="text/css">
     <style>
         body {
             padding-top: 50px;
-        }
-        img.codeSample {
-            width: 75%;
-            height: 10%;
-        }
-        i {
-            color: red;
-        }
-        li.step8list{
-            padding: 10px;
         }
     </style>
 
@@ -43,35 +34,57 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand">My AngularJS Blog |</a>
+                <a class="navbar-brand">My Blog |</a>
             </div>
 
+            <!--Starts Navigation-->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#whatIsAngularJS">What is AngularJS?</a>
-                    </li>
-                    <li><a href="#whyAngularJS">What is AngularJS?</a>
-                    </li>
+                    <!--First level-->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-expanded="false">Where do I begin? <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#step1">Step 1: Add AngularJS library</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#" aria-expanded="false">AngularJS<span class="caret"></span></a>
+                        <!--Everything under AngularJS-->
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+
+                            <li><a href="#whatIsAngularJS">What is AngularJS?</a>
                             </li>
-                            <li><a href="#step2">Step 2: Add ngTable script and CSS</a>
+                            <li><a href="#whyAngularJS">Why AngularJS?</a>
                             </li>
-                            <li><a href="#step3">Step 3: Add JavaScript containing your AngularJS app</a>
+
+                            <!--Second level under AngularJS-->
+                            <li class="dropdown-submenu">
+
+                                <a tabindex="-1" href="#whereDoYouStart">Where do I begin?</a>
+
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#step1">Step 1: Add AngularJS library</a>
+                                    </li>
+                                    <li><a href="#step2">Step 2: Add ngTable script and CSS</a>
+                                    </li>
+                                    <li><a href="#step3">Step 3: Add JavaScript containing your AngularJS app</a>
+                                    </li>
+                                    <li><a href="#step4">Step 4: Declare the app module</a>
+                                    </li>
+                                    <li><a href="#step5">Step 5: Initialize controller</a>
+                                    </li>
+                                    <li><a href="#step6">Step 6: Initialize data</a>
+                                    </li>
+                                    <li><a href="#step7">Step 7: Set-up sorting and filtering</a>
+                                    </li>
+                                    <li><a href="#step8">Step 8: Add your table</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li><a href="#step4">Step 4: Declare the app module</a>
-                            </li>
-                            <li><a href="#step5">Step 5: Initialize controller</a>
-                            </li>
-                            <li><a href="#step6">Step 6: Initialize data</a>
-                            </li>
-                            <li><a href="#step7">Step 7: Set-up sorting and filtering</a>
-                            </li>
-                            <li><a href="#step8">Step 8: Add your table</a>
-                            </li>
+                            <!--End of Second level under AngularJS-->
+
                         </ul>
+                        <!--End of First level under AngularJS-->
+
+                    </li>
+                    <!--End of AngularJS-->
+
+                    <li><a href="nodejsblog.html">Node.js</a>
                     </li>
                 </ul>
             </div>
@@ -159,11 +172,11 @@
                 </p>
 
                 <h3 id="step8">Step 8: Add your table</h3>
-                <p>Now add your table tags with your table row tags and table data tags inside. </p>
+                <p>Now add your table tags with your table row tags and table data tags inside.</p>
                 <img class="codeSample" src="Images/Step8.PNG">
                 <br/>
-                    <i>*Note: You can find more information for a lot of the attributes listed here on AngularJS's website. The only ones you may not be able to find are ng-table, show-filter, sortable, and filter.</i>
-                 <ul style="text-align: left">
+                <i>*Note: You can find more information for a lot of the attributes listed here on AngularJS's website. The only ones you may not be able to find are ng-table, show-filter, sortable, and filter.</i>
+                <ul style="text-align: left">
                     <li>ng-Table: The value of this attribute points to a scope property inside of your JavaScript file, and represents an instance of your ngTableParams.</li>
                     <li>show-filter: This attribute on our table tag will show textboxes on certain columns for us to be able to filter.</li>
                     <li>sortable: Add this attribute to the columns we want to sort. In our example, we set this attribute equal to "'title'" for our title column. Make sure to include the double quotes outside of the single quotes, and that the column you're trying to sort matches the property name of your data.</li>
